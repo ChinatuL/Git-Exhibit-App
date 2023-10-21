@@ -1,6 +1,6 @@
 # Git-Exhibit
 
-Git Exhibit is a webapp that implements a Github API fetch of a users portfolio, displays details from the users profile, a list of all public repositories and a link to details of each repository
+Git Exhibit is a webapp that implements a Github API fetch of a user's portfolio, displays details from the user's profile, a list of all public repositories and a link to details of each repository
 
 
 ## Features
