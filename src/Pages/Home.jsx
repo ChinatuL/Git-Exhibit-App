@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation, Outlet } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import Loading from "../Components/Loading";
 import Pagination from "../Components/Pagination";
 import people from "../assets/Icons/People.svg";
@@ -60,6 +61,14 @@ const Home = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Home | Git-Exhibit</title>
+                <meta
+                    name='description'
+                    content='The home page of the Git-Exhibit app, an app that fetches data from the GitHub API and displays it in a user-friendly way.'
+                />
+                <link rel='canonical' href='/home' />
+            </Helmet>
             <Navbar />
             {location.pathname === "/" ? (
                 <main className='main flex-col'>

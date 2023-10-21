@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, Outlet } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import Loading from "../Components/Loading";
 import leftArrow from "../assets/Icons/LeftArrow.svg";
 import language from "../assets/Icons/Language.svg";
@@ -37,43 +38,53 @@ const Repo = () => {
     }
 
     return (
-        <main className='main'>
-            <section className='repo__details flex-col'>
-                <Link to='/' className='back-to-home flex-row'>
-                    <img src={leftArrow} alt='' />
-                    <span>Return to Home</span>
-                </Link>
-                <div>
-                    <h1>{repo.name}</h1>
-                    <p className='repo__details-desc'>{repo.description}</p>
-                </div>
-                <div className='repo__stats'>
-                    <div className='repo__language'>
-                        <img src={language} alt='' />
-                        <p>{repo.language}</p>
+        <>
+            <Helmet>
+                <title>Repo Info | Git-Exhibit</title>
+                <meta
+                    name='description'
+                    content='This page displays the details of the repository you clicked on'
+                />
+                <link rel='canonical' href='/repo' />
+            </Helmet>
+            <main className='main'>
+                <section className='repo__details flex-col'>
+                    <Link to='/' className='back-to-home flex-row'>
+                        <img src={leftArrow} alt='' />
+                        <span>Return to Home</span>
+                    </Link>
+                    <div>
+                        <h1>{repo.name}</h1>
+                        <p className='repo__details-desc'>{repo.description}</p>
                     </div>
-                    <div className='repo__size'>
-                        <img src={folder} alt='' />
-                        <p>{repo.size} mb</p>
+                    <div className='repo__stats'>
+                        <div className='repo__language'>
+                            <img src={language} alt='' />
+                            <p>{repo.language}</p>
+                        </div>
+                        <div className='repo__size'>
+                            <img src={folder} alt='' />
+                            <p>{repo.size} mb</p>
+                        </div>
+                        <div className='repo__forks'>
+                            <img src={fork} alt='' />
+                            <p>{repo.forks} forks</p>
+                        </div>
+                        <div className='repo__stars'>
+                            <img src={star} alt='' />
+                            <p>{repo.stargazers_count} stars</p>
+                        </div>
                     </div>
-                    <div className='repo__forks'>
-                        <img src={fork} alt='' />
-                        <p>{repo.forks} forks</p>
-                    </div>
-                    <div className='repo__stars'>
-                        <img src={star} alt='' />
-                        <p>{repo.stargazers_count} stars</p>
-                    </div>
-                </div>
-                <a
-                    href={repo.html_url}
-                    rel='noreferrer'
-                    className='github__link'
-                >
-                    View on Github
-                </a>
-            </section>
-        </main>
+                    <a
+                        href={repo.html_url}
+                        rel='noreferrer'
+                        className='github__link'
+                    >
+                        View on Github
+                    </a>
+                </section>
+            </main>
+        </>
     );
 };
 export default Repo;

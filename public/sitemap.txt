@@ -1,0 +1,3 @@
+https://git-exhibit-webapp.netlify.app/
+https://git-exhibit-webapp.netlify.app/errortest
+https://git-exhibit-webapp.netlify.app/repo/reponame
