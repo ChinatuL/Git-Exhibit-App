@@ -1,8 +1,13 @@
-# React + Vite
+# Git-Exhibit
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Git Exhibit is a webapp that implements a Github API fetch of a users portfolio, displays details from the users profile, a list of all public repositories and a link to details of each repository
 
-Currently, two official plugins are available:
+## Tech Stack
+- React
+- React Router
+- Vite
+- Css
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Live Site
+A live version of Git-Exhibit can be found at [https://git-exhibit-webapp.netlify.app/](https://git-exhibit-webapp.netlify.app/)
+
