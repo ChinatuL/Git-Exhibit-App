@@ -24,7 +24,6 @@ const Repo = () => {
             },
         });
         const repo = await response.json();
-        console.log(repo);
         setRepo(repo);
         setIsLoading(false);
     };
