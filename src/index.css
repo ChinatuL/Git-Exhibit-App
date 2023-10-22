@@ -249,6 +249,11 @@ body {
     color: var(--text-clr-primary);
     font: inherit;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.page-numbers > button:hover {
+  background-color: var(--accent-clr);
 }
 
 .repo__details {
