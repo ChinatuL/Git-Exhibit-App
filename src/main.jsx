@@ -1,13 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Form, RouterProvider } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { ErrorBoundary } from "react-error-boundary";
-import Home from "./Pages/Home.jsx";
-import ErrorTest from "./Pages/ErrorTest";
+import {Home, ErrorTest, NotFound, Repo} from "./Pages"
 import ErrorFallback from "./Components/ErrorFallback";
-import NotFound from "./Pages/NotFound";
-import Repo from "./Pages/Repo.jsx";
 import "./index.css";
 
 const routes = [

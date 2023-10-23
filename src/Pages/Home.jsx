@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation, Outlet } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import Loading from "../Components/Loading";
-import Pagination from "../Components/Pagination";
+import { Loading, Pagination, Navbar } from "../Components"
 import people from "../assets/Icons/People.svg";
 import locationIcon from "../assets/Icons/Location.svg";
 import email from "../assets/Icons/Email.svg";
@@ -14,7 +13,6 @@ const userUrl = "https://api.github.com/users/chinatul";
 const repoUrl = "https://api.github.com/users/ChinatuL/repos?per_page=250";
 const token = import.meta.env.VITE_GITHUB_TOKEN;
 
-import Navbar from "../Components/Navbar";
 const Home = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [user, setUser] = useState({});
